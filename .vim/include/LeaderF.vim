@@ -28,3 +28,6 @@ let g:Lf_Gtagslabel = 'native-pygments'
 " noremap <C-B> :<C-U><C-R>=printf("Leaderf! rg --current-buffer -e %s ", expand("<cword>"))<CR>
 nmap <F3>b :<C-R>=printf("Leaderf! rg --all-buffers -e %s ", expand("<cword>"))<CR><CR>
 nmap <F3>g :<C-R>=printf("Leaderf! rg -e %s --ignore-file ~/.vimcache/.LfCache/ignore", expand("<cword>"))<CR><CR>
+
+hi Lf_hl_cursorline ctermfg=7 guifg=#6927ff
+

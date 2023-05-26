@@ -6,7 +6,7 @@ endif
 let mapleader=","
 
 call plug#begin('~/.vim/pluged')
-" Ycm ×Ô¶¯²¹È«²å¼ş
+" Ycm è‡ªåŠ¨è¡¥å…¨æ’ä»¶
 Plug 'ycm-core/YouCompleteMe'
 
 Plug 'majutsushi/tagbar'
@@ -16,21 +16,21 @@ Plug 'scrooloose/nerdtree'
 Plug 'easymotion/vim-easymotion'
 
 Plug 'junegunn/vim-easy-align'
-" ×Ô¶¯Éú³É.ycm_extra_conf.py
+" è‡ªåŠ¨ç”Ÿæˆ.ycm_extra_conf.py
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
-" airline ÃÀ»¯²å¼ş
+" airline ç¾åŒ–æ’ä»¶
 Plug 'vim-airline/vim-airline'
-" airline Ö÷Ìâ²å¼ş
+" airline ä¸»é¢˜æ’ä»¶
 Plug 'vim-airline/vim-airline-themes'
-" Leader ÎÄ¼ş²éÕÒ£¬tag,×Ö·û²éÕÒ²å¼ş
+" Leader æ–‡ä»¶æŸ¥æ‰¾ï¼Œtag,å­—ç¬¦æŸ¥æ‰¾æ’ä»¶
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
-" a.vim Í·ÎÄ¼ş,.cÎÄ¼ş¿ìËÙÌø×ª²å¼ş
+" a.vim å¤´æ–‡ä»¶,.cæ–‡ä»¶å¿«é€Ÿè·³è½¬æ’ä»¶
 Plug 'vim-scripts/a.vim'
 
 Plug 'vim-scripts/sessionman.vim'
-" ·­Òë²å¼ş
+" ç¿»è¯‘æ’ä»¶
 Plug 'voldikss/vim-translator'
-" coc ×Ô¶¯²»È«²å¼ş
+" coc è‡ªåŠ¨ä¸å…¨æ’ä»¶
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
@@ -55,42 +55,40 @@ source $HOME/.vim/include/vim-scripts.vim
 syntax on
 syntax enable
 
-" ÉèÖÃËÑË÷¸ßÁÁ
+" è®¾ç½®æœç´¢é«˜äº®
 set hlsearch
 " hi clear
-" ÉèÖÃËÑË÷×Ö·ûÑÕÉ«, Í¨¹ıhiÃüÁî¿É²éÕÒ²»Í¬ÃüÁî¶ÔÓ¦µÄÅäÉ«·½°¸
+" è®¾ç½®æœç´¢å­—ç¬¦é¢œè‰², é€šè¿‡hiå‘½ä»¤å¯æŸ¥æ‰¾ä¸åŒå‘½ä»¤å¯¹åº”çš„é…è‰²æ–¹æ¡ˆ
 hi Search term=standout ctermfg=0 ctermbg=11 guifg=Black guibg=Yellow
 hi LineNr term=bold ctermfg=3
-" if ÑÕÉ«
+" if é¢œè‰²
 hi Conditional term=bold ctermfg=3
-" else ÑÕÉ«
+" else é¢œè‰²
 hi Exception term=bold ctermfg=3
-" for Ñ­»·ÑÕÉ«
+" for å¾ªç¯é¢œè‰²
 hi Repeat term=bold ctermfg=3
 hi Operator term=bold ctermfg=3
 hi Keyword term=bold ctermfg=3
 hi Label term=bold ctermfg=3
-" º¯ÊıÑÕÉ«
+" å‡½æ•°é¢œè‰²
 hi cFunctions term=bold ctermfg=6
-" ÔËËã·ûÑÕÉ«
-hi operation ctermfg=28
-" ¿ÉÊÓÄ£Ê½ÑÕÉ«
+" å¯è§†æ¨¡å¼é¢œè‰²
 hi Visual term=reverse ctermbg=8 guibg=LightGrey
-" ¸ßÁÁµ±Ç°ĞĞ
+" é«˜äº®å½“å‰è¡Œ
 set cursorline   
 hi CursorLine   cterm=NONE ctermbg=black ctermfg=NONE 
 "hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white
-"Öğ²½ËÑË÷Ä£Ê½£¬¶Ôµ±Ç°¼üÈëµÄ×Ö·û½øĞĞËÑË÷¶ø²»±ØµÈ´ı¼üÈëÍê³É
+"é€æ­¥æœç´¢æ¨¡å¼ï¼Œå¯¹å½“å‰é”®å…¥çš„å­—ç¬¦è¿›è¡Œæœç´¢è€Œä¸å¿…ç­‰å¾…é”®å…¥å®Œæˆ
 set incsearch
-" ÏÔÊ¾ĞĞºÅ
+" æ˜¾ç¤ºè¡Œå·
 set nu
-" ×Ô¶¯Ëõ½ø 
+" è‡ªåŠ¨ç¼©è¿› 
 set autoindent 
-" ts=4 TabÏÔÊ¾³¤¶ÈÎª4¸ö¿Õ¸ñ,Ä¬ÈÏÊÇ8¸ö¿Õ¸ñ£¬ sw=4±íÊ¾Ã¿Ò»¼¶Ëõ½ø³¤¶ÈÎª4¸ö¿Õ¸ñ
+" ts=4 Tabæ˜¾ç¤ºé•¿åº¦ä¸º4ä¸ªç©ºæ ¼,é»˜è®¤æ˜¯8ä¸ªç©ºæ ¼ï¼Œ sw=4è¡¨ç¤ºæ¯ä¸€çº§ç¼©è¿›é•¿åº¦ä¸º4ä¸ªç©ºæ ¼
 set ts=4 sw=4
-" Èç¹û´æÔÚCMakefile.txt »òÕß etabÎÄ¼ş,ÔòtabÓÃÊÇ¸ö¿Õ¸ñ´úÌæ
+" å¦‚æœå­˜åœ¨CMakefile.txt æˆ–è€… etabæ–‡ä»¶,åˆ™tabç”¨æ˜¯ä¸ªç©ºæ ¼ä»£æ›¿
 if filereadable("CMakeLists.txt") || filereadable("etab")
-    " et±íÊ¾tab Ê¹ÓÃ¿Õ¸ñ´úÌæ, softtabstop=4±íÊ¾±à¼­Ä£Ê½µÄÊ±ºò°´ÍË¸ñ¼üµÄÊ±ºòÍË»ØËõ½øµÄ³¤¶È
+    " etè¡¨ç¤ºtab ä½¿ç”¨ç©ºæ ¼ä»£æ›¿, softtabstop=4è¡¨ç¤ºç¼–è¾‘æ¨¡å¼çš„æ—¶å€™æŒ‰é€€æ ¼é”®çš„æ—¶å€™é€€å›ç¼©è¿›çš„é•¿åº¦
     set et softtabstop=4
 endif
 
@@ -101,19 +99,19 @@ set fileencoding=gb2312
 set termencoding=utf-8
 set encoding=utf-8
 set langmenu=zh_CN.UTF-8
-" ÉèÖÃ´ò¿ªÎÄ¼şµÄ±àÂë¸ñÊ½
+" è®¾ç½®æ‰“å¼€æ–‡ä»¶çš„ç¼–ç æ ¼å¼
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 
-" ·Ö¸î´°¿Ú¸Ä±ä´°¿ÚµÄ³ß´ç
-" µ÷Õû´¹Ö±´°¿Ú´óĞ¡
+" åˆ†å‰²çª—å£æ”¹å˜çª—å£çš„å°ºå¯¸
+" è°ƒæ•´å‚ç›´çª—å£å¤§å°
 nnoremap    t=  :resize +5<CR>
 nnoremap    t-  :resize -5<CR>
-" µ÷ÕûË®Æ½´°¿Ú´óĞ¡
+" è°ƒæ•´æ°´å¹³çª—å£å¤§å°
 nnoremap    t,  :vertical resize +5<CR>
 nnoremap    t.  :vertical resize -5<CR>
 nnoremap    tj  :resize +5<CR>
 
-"Ã¿´Î±£´æÎÄ¼şÊ±£¬×Ô¶¯¸üĞÂtags
+"æ¯æ¬¡ä¿å­˜æ–‡ä»¶æ—¶ï¼Œè‡ªåŠ¨æ›´æ–°tags
 "autocmd BufWritePost *.cpp,*.c,*.h silent! :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q
 
 " cscope

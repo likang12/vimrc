@@ -24,7 +24,8 @@ syntax match pointer display "\* \{1,3\}\w\+"
 syntax match pointer display "&\w\+"
 syntax match pointer display "->\w\+"
 syntax match pointer display "\.\w\+"
-hi pointer gui=NONE cterm=bold  ctermfg=DarkYellow 
+"hi pointer gui=NONE cterm=bold  ctermfg=DarkYellow 
+hi pointer term=bold ctermfg=3
 
 " structure & union & enum
 syntax match struct_name contained "struct \w*[ ),]"hs=s+7,he=e-1
@@ -44,6 +45,8 @@ highlight link enum_key keyword_basic
 
 syntax match operation display " [?:+=\-\*/&|~%^] "
 syntax match operation display " [<>!] "
+syntax match operation display "[<>!]"
+"syntax match operation display "[->]"
 syntax match operation display " [<>!]= "
 syntax match operation display " [+=\-\*/&|~]= "
 syntax match operation display " \(&&\|||\) "
@@ -54,6 +57,8 @@ syntax match operation display " >>=\? "
 syntax match operation display " <<=\? "
 syntax match operation display "--"
 "hi operation gui=NONE cterm=bold  ctermfg=Green  "浅红
+" 运算符颜色
+hi operation ctermfg=28
 
 ""=====================================================
 "hi Comment              ctermfg=DarkCyan        ctermbg=Black  
