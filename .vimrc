@@ -33,6 +33,9 @@ Plug 'voldikss/vim-translator'
 " coc 自动不全插件
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" 行末空格管理
+Plug 'ntpeters/vim-better-whitespace'
+
 call plug#end()
 
 " YouCompleteMe
@@ -51,6 +54,8 @@ source $HOME/.vim/include/vim-airline.vim
 source $HOME/.vim/include/tagbar.vim
 " vim-scripts (a.vim sessionman.vim)
 source $HOME/.vim/include/vim-scripts.vim
+" ntpeters/vim-better-whitespace
+source $HOME/.vim/include/vim-better-whitespace.vim
 
 syntax on
 syntax enable
