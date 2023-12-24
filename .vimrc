@@ -80,15 +80,15 @@ hi cFunctions term=bold ctermfg=6
 " 可视模式颜色
 hi Visual term=reverse ctermbg=8 guibg=LightGrey
 " 高亮当前行
-set cursorline   
-hi CursorLine   cterm=NONE ctermbg=black ctermfg=NONE 
+set cursorline
+hi CursorLine   cterm=NONE ctermbg=black ctermfg=NONE
 "hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white
 "逐步搜索模式，对当前键入的字符进行搜索而不必等待键入完成
 set incsearch
 " 显示行号
 set nu
-" 自动缩进 
-set autoindent 
+" 自动缩进
+set autoindent
 " ts=4 Tab显示长度为4个空格,默认是8个空格， sw=4表示每一级缩进长度为4个空格
 set ts=4 sw=4
 " 如果存在CMakefile.txt 或者 etab文件,则tab用是个空格代替
