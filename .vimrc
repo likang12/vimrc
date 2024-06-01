@@ -37,6 +37,9 @@ Plug 'voldikss/vim-translator'
 Plug 'ntpeters/vim-better-whitespace'
 " git插件
 Plug 'airblade/vim-gitgutter'
+" https://github.com/tpope/vim-fugitive
+Plug 'tpope/vim-fugitive'
+Plug 'mhinz/vim-startify'
 
 call plug#end()
 
