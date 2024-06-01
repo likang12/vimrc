@@ -35,6 +35,8 @@ Plug 'voldikss/vim-translator'
 
 " 行末空格管理
 Plug 'ntpeters/vim-better-whitespace'
+" git插件
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
@@ -56,6 +58,8 @@ source $HOME/.vim/include/tagbar.vim
 source $HOME/.vim/include/vim-scripts.vim
 " ntpeters/vim-better-whitespace
 source $HOME/.vim/include/vim-better-whitespace.vim
+" airblade/vim-gitgutter
+source $HOME/.vim/include/vim-gitgutter.vim
 
 syntax on
 syntax enable
@@ -100,7 +104,8 @@ endif
 nmap <Leader>et :set et softtabstop=4<CR>
 nmap <Leader>rt :retab!<CR>
 
-set fileencoding=gb2312
+" set fileencoding=gb2312
+set fileencoding=utf-8
 set termencoding=utf-8
 set encoding=utf-8
 set langmenu=zh_CN.UTF-8
