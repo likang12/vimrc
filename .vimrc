@@ -40,6 +40,8 @@ Plug 'airblade/vim-gitgutter'
 " https://github.com/tpope/vim-fugitive
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-startify'
+" ALE 语法检查
+Plug 'dense-analysis/ale'
 
 call plug#end()
 
@@ -63,6 +65,8 @@ source $HOME/.vim/include/vim-scripts.vim
 source $HOME/.vim/include/vim-better-whitespace.vim
 " airblade/vim-gitgutter
 source $HOME/.vim/include/vim-gitgutter.vim
+" dense-analysis/ale
+source $HOME/.vim/include/vim-ale.vim
 
 syntax on
 syntax enable
