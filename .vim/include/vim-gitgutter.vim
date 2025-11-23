@@ -1,5 +1,5 @@
 
-" https://github.com/airblade/vim-gitgutter
+
 " airblade/vim-gitgutter
 
 " jump between hunks with [c and ]c

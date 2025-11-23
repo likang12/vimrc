@@ -6,7 +6,8 @@ endif
 let mapleader=","
 
 call plug#begin('~/.vim/pluged')
-" Ycm è‡ªåŠ¨è¡¥å…¨æ’ä»¶
+" Plug 'mileszs/ack.vim'
+" Ycm ×Ô¶¯²¹È«²å¼ş
 Plug 'ycm-core/YouCompleteMe'
 
 Plug 'majutsushi/tagbar'
@@ -16,32 +17,41 @@ Plug 'scrooloose/nerdtree'
 Plug 'easymotion/vim-easymotion'
 
 Plug 'junegunn/vim-easy-align'
-" è‡ªåŠ¨ç”Ÿæˆ.ycm_extra_conf.py
+" ×Ô¶¯Éú³É.ycm_extra_conf.py
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
-" airline ç¾åŒ–æ’ä»¶
+" airline ÃÀ»¯²å¼ş
 Plug 'vim-airline/vim-airline'
-" airline ä¸»é¢˜æ’ä»¶
+" airline Ö÷Ìâ²å¼ş
 Plug 'vim-airline/vim-airline-themes'
-" Leader æ–‡ä»¶æŸ¥æ‰¾ï¼Œtag,å­—ç¬¦æŸ¥æ‰¾æ’ä»¶
+" Leader ÎÄ¼ş²éÕÒ£¬tag,×Ö·û²éÕÒ²å¼ş
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
-" a.vim å¤´æ–‡ä»¶,.cæ–‡ä»¶å¿«é€Ÿè·³è½¬æ’ä»¶
+" a.vim Í·ÎÄ¼ş,.cÎÄ¼ş¿ìËÙÌø×ª²å¼ş
 Plug 'vim-scripts/a.vim'
 
 Plug 'vim-scripts/sessionman.vim'
-" ç¿»è¯‘æ’ä»¶
+" ·­Òë²å¼ş
 Plug 'voldikss/vim-translator'
-" coc è‡ªåŠ¨ä¸å…¨æ’ä»¶
+" coc ×Ô¶¯²»È«²å¼ş
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" è¡Œæœ«ç©ºæ ¼ç®¡ç†
+" ĞĞÄ©¿Õ¸ñ¹ÜÀí
 Plug 'ntpeters/vim-better-whitespace'
-" gitæ’ä»¶
+" git²å¼ş
 Plug 'airblade/vim-gitgutter'
 " https://github.com/tpope/vim-fugitive
 Plug 'tpope/vim-fugitive'
+" Ö÷Ò³
 Plug 'mhinz/vim-startify'
-" ALE è¯­æ³•æ£€æŸ¥
+" ALE Óï·¨¼ì²é
 Plug 'dense-analysis/ale'
+" powerline
+" Plug 'powerline/powerline'
+
+" codeium
+"Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
+Plug 'Exafunction/windsurf.vim', { 'branch': 'main' }
+
+"Plug 'github/copilot.vim'
 
 call plug#end()
 
@@ -56,7 +66,7 @@ source $HOME/.vim/include/LeaderF.vim
 " voldikss/vim-translator
 source $HOME/.vim/include/vim-translator.vim
 " vim-airline/vim-airline
-source $HOME/.vim/include/vim-airline.vim
+" source $HOME/.vim/include/vim-airline.vim
 " majutsushi/tagbar
 source $HOME/.vim/include/tagbar.vim
 " vim-scripts (a.vim sessionman.vim)
@@ -71,64 +81,63 @@ source $HOME/.vim/include/vim-ale.vim
 syntax on
 syntax enable
 
-" è®¾ç½®æœç´¢é«˜äº®
+" ÉèÖÃËÑË÷¸ßÁÁ
 set hlsearch
 " hi clear
-" è®¾ç½®æœç´¢å­—ç¬¦é¢œè‰², é€šè¿‡hiå‘½ä»¤å¯æŸ¥æ‰¾ä¸åŒå‘½ä»¤å¯¹åº”çš„é…è‰²æ–¹æ¡ˆ
+" ÉèÖÃËÑË÷×Ö·ûÑÕÉ«, Í¨¹ıhiÃüÁî¿É²éÕÒ²»Í¬ÃüÁî¶ÔÓ¦µÄÅäÉ«·½°¸
 hi Search term=standout ctermfg=0 ctermbg=11 guifg=Black guibg=Yellow
 hi LineNr term=bold ctermfg=3
-" if é¢œè‰²
+" if ÑÕÉ«
 hi Conditional term=bold ctermfg=3
-" else é¢œè‰²
+" else ÑÕÉ«
 hi Exception term=bold ctermfg=3
-" for å¾ªç¯é¢œè‰²
+" for Ñ­»·ÑÕÉ«
 hi Repeat term=bold ctermfg=3
 hi Operator term=bold ctermfg=3
 hi Keyword term=bold ctermfg=3
 hi Label term=bold ctermfg=3
-" å‡½æ•°é¢œè‰²
+" º¯ÊıÑÕÉ«
 hi cFunctions term=bold ctermfg=6
-" å¯è§†æ¨¡å¼é¢œè‰²
+" ¿ÉÊÓÄ£Ê½ÑÕÉ«
 hi Visual term=reverse ctermbg=8 guibg=LightGrey
-" é«˜äº®å½“å‰è¡Œ
+" ¸ßÁÁµ±Ç°ĞĞ
 set cursorline
 hi CursorLine   cterm=NONE ctermbg=black ctermfg=NONE
 "hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white
-"é€æ­¥æœç´¢æ¨¡å¼ï¼Œå¯¹å½“å‰é”®å…¥çš„å­—ç¬¦è¿›è¡Œæœç´¢è€Œä¸å¿…ç­‰å¾…é”®å…¥å®Œæˆ
+"Öğ²½ËÑË÷Ä£Ê½£¬¶Ôµ±Ç°¼üÈëµÄ×Ö·û½øĞĞËÑË÷¶ø²»±ØµÈ´ı¼üÈëÍê³É
 set incsearch
-" æ˜¾ç¤ºè¡Œå·
+" ÏÔÊ¾ĞĞºÅ
 set nu
-" è‡ªåŠ¨ç¼©è¿›
+" ×Ô¶¯Ëõ½ø
 set autoindent
-" ts=4 Tabæ˜¾ç¤ºé•¿åº¦ä¸º4ä¸ªç©ºæ ¼,é»˜è®¤æ˜¯8ä¸ªç©ºæ ¼ï¼Œ sw=4è¡¨ç¤ºæ¯ä¸€çº§ç¼©è¿›é•¿åº¦ä¸º4ä¸ªç©ºæ ¼
+" ts=4 TabÏÔÊ¾³¤¶ÈÎª4¸ö¿Õ¸ñ,Ä¬ÈÏÊÇ8¸ö¿Õ¸ñ£¬ sw=4±íÊ¾Ã¿Ò»¼¶Ëõ½ø³¤¶ÈÎª4¸ö¿Õ¸ñ
 set ts=4 sw=4
-" å¦‚æœå­˜åœ¨CMakefile.txt æˆ–è€… etabæ–‡ä»¶,åˆ™tabç”¨æ˜¯ä¸ªç©ºæ ¼ä»£æ›¿
+" Èç¹û´æÔÚCMakefile.txt »òÕß etabÎÄ¼ş,ÔòtabÓÃÊÇ¸ö¿Õ¸ñ´úÌæ
 if filereadable("CMakeLists.txt") || filereadable("etab")
-    " etè¡¨ç¤ºtab ä½¿ç”¨ç©ºæ ¼ä»£æ›¿, softtabstop=4è¡¨ç¤ºç¼–è¾‘æ¨¡å¼çš„æ—¶å€™æŒ‰é€€æ ¼é”®çš„æ—¶å€™é€€å›ç¼©è¿›çš„é•¿åº¦
+    " et±íÊ¾tab Ê¹ÓÃ¿Õ¸ñ´úÌæ, softtabstop=4±íÊ¾±à¼­Ä£Ê½µÄÊ±ºò°´ÍË¸ñ¼üµÄÊ±ºòÍË»ØËõ½øµÄ³¤¶È
     set et softtabstop=4
 endif
 
 nmap <Leader>et :set et softtabstop=4<CR>
 nmap <Leader>rt :retab!<CR>
 
-" set fileencoding=gb2312
-set fileencoding=utf-8
+set fileencoding=gb2312
 set termencoding=utf-8
 set encoding=utf-8
 set langmenu=zh_CN.UTF-8
-" è®¾ç½®æ‰“å¼€æ–‡ä»¶çš„ç¼–ç æ ¼å¼
+" ÉèÖÃ´ò¿ªÎÄ¼şµÄ±àÂë¸ñÊ½
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 
-" åˆ†å‰²çª—å£æ”¹å˜çª—å£çš„å°ºå¯¸
-" è°ƒæ•´å‚ç›´çª—å£å¤§å°
+" ·Ö¸î´°¿Ú¸Ä±ä´°¿ÚµÄ³ß´ç
+" µ÷Õû´¹Ö±´°¿Ú´óĞ¡
 nnoremap    t=  :resize +5<CR>
 nnoremap    t-  :resize -5<CR>
-" è°ƒæ•´æ°´å¹³çª—å£å¤§å°
+" µ÷ÕûË®Æ½´°¿Ú´óĞ¡
 nnoremap    t,  :vertical resize +5<CR>
 nnoremap    t.  :vertical resize -5<CR>
 nnoremap    tj  :resize +5<CR>
 
-"æ¯æ¬¡ä¿å­˜æ–‡ä»¶æ—¶ï¼Œè‡ªåŠ¨æ›´æ–°tags
+"Ã¿´Î±£´æÎÄ¼şÊ±£¬×Ô¶¯¸üĞÂtags
 "autocmd BufWritePost *.cpp,*.c,*.h silent! :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q
 
 " cscope
@@ -144,4 +153,3 @@ nmap <F2>e :cs find e <C-R>=expand("<cword>")<CR><CR>
 nmap <F2>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
 nmap <F2>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
 nmap <F2>d :cs find d <C-R>=expand("<cword>")<CR><CR>
-

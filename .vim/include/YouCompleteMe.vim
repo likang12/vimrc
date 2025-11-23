@@ -28,3 +28,7 @@ let g:ycm_semantic_triggers =  {
                         \ }
 
 set completeopt-=preview
+
+
+" sudo apt install build-essential cmake python-dev python3-dev clang
+" ./install.py --clang-completer
